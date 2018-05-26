@@ -53,7 +53,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: './img/[name][hash:7].[ext]'
+              name: './static/[name][hash:7].[ext]'
             }
           }
         ]
@@ -65,7 +65,7 @@ module.exports = {
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "static/[name].css",
     }),
     new CleanWebpackPlugin(['dist'])
   ],

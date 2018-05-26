@@ -1,3 +1,11 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 
+main {
+  margin-top: 20px;
+}
+
+nav {
+  height: 128px;
+  /*box-shadow: 0 8px 6px -6px #999;*/
+}
