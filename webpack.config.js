@@ -3,6 +3,7 @@
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const contentBase = path.join(__dirname, 'dist');
 
 module.exports = {
@@ -24,14 +25,40 @@ module.exports = {
     }
   },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        "css-loader",
-        "sass-loader"
-      ]
-    }]
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          {loader: MiniCssExtractPlugin.loader},
+          {loader: "css-loader"},
+          {
+            // PostCSS stuff is required by Bootstrap SCSS.
+            loader: 'postcss-loader',
+            options: {
+              plugins: function () {
+                return [
+                  require('precss'),
+                  require('autoprefixer')
+                ];
+              }
+            }
+          },
+          {loader: "sass-loader"}
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: './img/[name][hash:7].[ext]'
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlPlugin({
@@ -39,7 +66,8 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
-    })
+    }),
+    new CleanWebpackPlugin(['dist'])
   ],
   devServer: (process.env.NODE_ENV === 'production') ? false : {
     contentBase: contentBase,
