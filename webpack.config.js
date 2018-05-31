@@ -10,6 +10,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: contentBase,
+    publicPath: '/',
     filename: '[name].js'
   },
   optimization: {
@@ -53,7 +54,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: './static/[name][hash:7].[ext]'
+              name: 'static/[name][hash:7].[ext]'
             }
           }
         ]
@@ -69,9 +70,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist'])
   ],
-  devServer: (process.env.NODE_ENV === 'production') ? false : {
+  devServer: {
     contentBase: contentBase,
-    compress: true,
+    publicPath: '/',
     port: 8081
   },
   devtool: (process.env.NODE_ENV === 'production') ? false : 'source-map'

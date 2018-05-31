@@ -5,7 +5,24 @@ main {
   margin-top: 20px;
 }
 
-nav {
-  height: 128px;
-  /*box-shadow: 0 8px 6px -6px #999;*/
+.image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url('../../static/bg4.jpg');
+  /* Using vh sets this independently to the container */
+  height: 100vh;
+  /* This is how you make it fit the screen */
+  background-size: cover;
+  background-position: center;
+  /* Flex stuff */
+  display: flex;
+  flex-direction: column;
+  /* Center everything for the Hero: */
+  justify-content: center;
+  align-items: center;
+  /* This makes it so text doesn't stick to the sides when the screen is very small */
+  padding: 0 20px;
+  z-index: -999;
 }
