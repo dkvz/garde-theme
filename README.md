@@ -1,3 +1,18 @@
+# Weird attempt at Web Design
+
+# Dev server
+```
+npm run dev
+```
+
+# TODO
+[ ] The shadow on the image-bg-overlay should be inward, not outward.
+[ ] Why am I using bootstrap?
+[ ] Try the "display" classes on hero titles. 
+[ ] Add browser check for flex support, redirect to old site otherwise.
+
+# Old stuff
+
 Use this instead:
 ```
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");

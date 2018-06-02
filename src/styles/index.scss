@@ -53,16 +53,47 @@ header {
   /* Center everything for the Hero: */
   justify-content: center;
   align-items: center;
+  text-align: center;
   /* This makes it so text doesn't stick to the sides when the screen is very small */
   padding: 0 20px;
   z-index: 1;
 }
 
-.hero-front h1 {
+/* .hero-front h1, .hero-front h2, .hero-front h3 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+.hero-front h1 {
   font-size: 4em;
   font-weight: bolder;
-  letter-spacing: 10px;
+  letter-spacing: 12px;
   text-transform: uppercase;
   color: #fff;
+}
+
+.hero-front h2 {
+  color: $primary;
+  letter-spacing: 6px;
+  color: $secondary;
+}
+
+.hero-front h3 {
+  color: #999;
+}
+
+.main-section {
+  margin-top: 40px;
+}
+
+footer {
+  background-color: $dark-bg;
+  margin-top: 80px;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.copyr {
+  background-color: lighten($dark-bg, 10);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
