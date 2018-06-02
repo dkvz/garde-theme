@@ -11,6 +11,29 @@ npm run dev
 [ ] Try the "display" classes on hero titles. 
 [ ] Add browser check for flex support, redirect to old site otherwise.
 
+# Templating
+There is a webpack loader for Handlebar templates:
+```
+loaders: [
+        // Compile handlebars template
+        {
+            test: /\.hbs$/,
+            loader: 'handlebars-loader',
+            options: {
+                helperDirs: DIR_HELPERS,
+                partialDirs: DIR_PARTIALS
+            }
+        }
+    ],
+```
+
+Example taken from this repo: https://github.com/gokulthehunter/Webpack-boilerplate/blob/master/scripts/config/pages.config.js
+
+This example also creates a list of instances of HtmlWebpackPlugin for each page by first getting a list of every page using something like:
+```
+const pages = fs.readdirSync(DIR_PAGES).filter(fileName => REGEX_HBS.test(fileName));
+```
+
 # Old stuff
 
 Use this instead:
