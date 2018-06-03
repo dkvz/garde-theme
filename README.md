@@ -34,6 +34,13 @@ This example also creates a list of instances of HtmlWebpackPlugin for each page
 const pages = fs.readdirSync(DIR_PAGES).filter(fileName => REGEX_HBS.test(fileName));
 ```
 
+## Pass information to tempaltes
+To give information such as language to a template, this explains how to do it I think: https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates
+
+I need to pass the language to templates to decide on what to display.
+
+The parameters have to get passed to the partials or it won't work.
+
 # Old stuff
 
 Use this instead:
