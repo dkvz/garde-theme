@@ -1,10 +1,13 @@
-// Stole most of this config from there:
+// Stole a good part of this config from there:
 // https://github.com/jalkoby/sass-webpack-plugin
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const contentBase = path.join(__dirname, 'dist');
+
+// Supported languages:
+const languages = ['fr', 'en'];
 
 const config = {
   entry: './src/app.js',
@@ -64,16 +67,12 @@ const config = {
         loader: 'handlebars-loader',
         options: {
             //helperDirs: DIR_HELPERS,
-            partialDirs: './src/partials/'
+            partialDirs: path.join(__dirname, 'src/partials')
         }
       }
     ]
   },
   plugins: [
-    new HtmlPlugin({
-      template: './src/index.hbs',
-      testParam: 'Testing the title'
-    }),
     new MiniCssExtractPlugin({
       filename: "static/[name].css",
     }),
@@ -86,5 +85,15 @@ const config = {
   },
   devtool: (process.env.NODE_ENV === 'production') ? false : 'source-map'
 };
+
+// Add the different pages.
+// I could scan the "pages" directory.
+config.plugins.push(
+  new HtmlPlugin({
+    template: './src/pages/index.hbs',
+    testParam: 'Testing the title',
+    filename: 'index.html'
+  })
+);
 
 module.exports = config;
