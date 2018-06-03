@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const contentBase = path.join(__dirname, 'dist');
 
-module.exports = {
+const config = {
   entry: './src/app.js',
   output: {
     path: contentBase,
@@ -58,12 +58,21 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader',
+        options: {
+            //helperDirs: DIR_HELPERS,
+            partialDirs: './src/partials/'
+        }
       }
     ]
   },
   plugins: [
     new HtmlPlugin({
-      template: './src/index.html',
+      template: './src/index.hbs',
+      testParam: 'Testing the title'
     }),
     new MiniCssExtractPlugin({
       filename: "static/[name].css",
@@ -77,3 +86,5 @@ module.exports = {
   },
   devtool: (process.env.NODE_ENV === 'production') ? false : 'source-map'
 };
+
+module.exports = config;
