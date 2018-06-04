@@ -66,7 +66,7 @@ const config = {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
         options: {
-            //helperDirs: DIR_HELPERS,
+            helperDirs: path.join(__dirname, 'src/helpers'),
             partialDirs: path.join(__dirname, 'src/partials')
         }
       }

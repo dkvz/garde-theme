@@ -41,6 +41,20 @@ I need to pass the language to templates to decide on what to display.
 
 The parameters have to get passed to the partials or it won't work.
 
+## Helpers with Webpack
+You can apparently export the function with the correct script filename and it works:
+```
+module.exports = function (key, short) {
+  return 'Asked for a helper';
+};
+```
+Then provided my module file here is named 'translate.js', I can use the function in templates like so:
+```
+{{{translate test}}}
+```
+
+Don't forget to add "helpersDir" to the hbr loader for the resolution to work the easiest.
+
 # Old stuff
 
 Use this instead:
