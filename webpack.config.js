@@ -88,12 +88,14 @@ const config = {
 
 // Add the different pages.
 // I could scan the "pages" directory.
-config.plugins.push(
-  new HtmlPlugin({
-    template: './src/pages/index.hbs',
-    testParam: 'Testing the title',
-    filename: 'index.html'
-  })
-);
+languages.map(l => {
+  config.plugins.push(
+    new HtmlPlugin({
+      template: './src/pages/index.hbs',
+      lang: l,
+      filename: l + '/index.html'
+    })
+  );
+});
 
 module.exports = config;
