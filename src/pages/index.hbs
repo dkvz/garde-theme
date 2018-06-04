@@ -1,4 +1,4 @@
-  {{> header}}
+   {{> header lang=htmlWebpackPlugin.options.lang}}
     <div class="image-bg-wrapper">
       <div class="image-bg"></div>
       <div class="image-bg-overlay shadow p-3 mb-5"></div>
@@ -7,8 +7,8 @@
         <h2>Du premier régiment des grenadiers à pied de la Garde Impériale</h2>
         <h3>Waterloo</h3>
         <div>
-          <a href="#" class="btn btn-primary btn-lg">Contactez-nous!</a>
-          <a href="#" class="btn btn-primary btn-lg">Rejoignez-nous!</a>
+          <a href="#" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'contactUs'}}}</a>
+          <a href="#" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'joinUs'}}}</a>
         </div>
       </div>
     </div>
@@ -19,8 +19,7 @@
         Musique fondée en 1974 à Waterloo, cette formation reconstitue ce qu’était LA musique de l’Empereur.<br />
         C’est aujourd’hui la plus ancienne musique en activité. Elle reprend les tenues selon l’ordonnance de 1809.
       </blockquote>
-      <p>{{{translate test}}}</p>
       <!-- Add a carousel here -->
       <a href="#" class="btn btn-primary btn-lg">Consultez notre histoire</a>
     </div>
-  {{> footer}}
+  {{> footer lang=htmlWebpackPlugin.options.lang}}

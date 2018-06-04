@@ -1,10 +1,26 @@
 {
   "fr": {
     "contactUs": "Contactez-nous!",
-    "joinUs": "Rejoignez-nous!"
+    "joinUs": "Rejoignez-nous!",
+    "siteTitle": "La Musique de la Garde Impériale de Waterloo",
+    "home": "Accueil",
+    "history": "Historique",
+    "audioCd": "Enregistrements",
+    "press": "Presse",
+    "contact": "Contact",
+    "addressAndSched": "Adresse et horaires",
+    "contactSociety": "Contacter la société"
   },
   "en": {
     "contactUs": "Contact us!",
-    "joinUs": "Join us!"
+    "joinUs": "Join us!",
+    "siteTitle": "La Musique de la Garde Impériale de Waterloo",
+    "home": "Home",
+    "history": "History",
+    "audioCd": "Audio CD",
+    "press": "Press",
+    "contact": "Contact",
+    "addressAndSched": "Joining us",
+    "contactSociety": "Contact us"
   }
 }

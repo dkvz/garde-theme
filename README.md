@@ -5,12 +5,20 @@
 npm run dev
 ```
 
+# Code Style
+* Tab -> 2 spaces
+* Semicolons
+* Use ES6 for Webpack config, imports, Handlebars helpers
+* Use ES5 for all the rest
+
 # TODO
 [ ] The shadow on the image-bg-overlay should be inward, not outward.
 [ ] Why am I using bootstrap?
 [ ] Try the "display" classes on hero titles. 
 [ ] Add browser check for flex support, redirect to old site otherwise.
-
+[ ] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
+[ ] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
+ 
 # Templating
 There is a webpack loader for Handlebar templates:
 ```
@@ -54,6 +62,19 @@ Then provided my module file here is named 'translate.js', I can use the functio
 ```
 
 Don't forget to add "helpersDir" to the hbr loader for the resolution to work the easiest.
+
+## Index page
+For SEO reasons, I think my index page should be the full "default language" page (so with app.js as well) but with an additional JS file in head which will do the redirect according to language and the modernizr redirect.
+
+That way if a search engine doesn't apply the redirect it's still getting the whole page.
+
+Another way to do this is to propose a modal dialog asking if the user wants to go to its browser language. The issue is that we will ask everytime unless we use localStorage or a cookie to store the thing.
+
+LocalStorage falls under the same cookie-disclaimer laws though. I will start with a simple "redirect to english if browser is in english" way, then people can use the language selector on site.
+
+This is how the current Drupal site does it anyway, and I'm pretty sure it's got cookies and we don't disclaim anything.
+
+It might be good to have a page explaining the site doesn't use cookies. The so called "privacy statement".
 
 # Old stuff
 

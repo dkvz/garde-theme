@@ -6,8 +6,22 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const contentBase = path.join(__dirname, 'dist');
 
+// Is your plan to never, ever split this config file into 
+// multiple files ?
+// Yes. That is my plan. Thanks for asking.
+
 // Supported languages:
 const languages = ['fr', 'en'];
+
+// Generates config objects for HtmlWebpackPlugin instances:
+function hwpConf(lang, page) {
+  return {
+    template: './src/pages/' + page + '.hbs',
+    lang: lang,
+    page: page,
+    filename: lang + '/' + page + '.html'
+  };
+}
 
 const config = {
   entry: './src/app.js',
@@ -16,6 +30,8 @@ const config = {
     publicPath: '/',
     filename: '[name].js'
   },
+  // We need all that stuff for SASS.
+  // I already regret using it.
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -86,15 +102,14 @@ const config = {
   devtool: (process.env.NODE_ENV === 'production') ? false : 'source-map'
 };
 
+// Add the main index page here:
+
+
 // Add the different pages.
 // I could scan the "pages" directory.
 languages.map(l => {
   config.plugins.push(
-    new HtmlPlugin({
-      template: './src/pages/index.hbs',
-      lang: l,
-      filename: l + '/index.html'
-    })
+    new HtmlPlugin(hwpConf(l, 'index'))
   );
 });
 
