@@ -2,6 +2,7 @@
 // https://github.com/jalkoby/sass-webpack-plugin
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const contentBase = path.join(__dirname, 'dist');
@@ -12,19 +13,32 @@ const contentBase = path.join(__dirname, 'dist');
 
 // Supported languages:
 const languages = ['fr', 'en'];
+// The main index page will be generated using the
+// default language.
+const defaultLanguage = 'fr';
 
 // Generates config objects for HtmlWebpackPlugin instances:
+const minifyOptions = {
+  removeComments: true,
+  collapseWhitespace: true,
+  removeAttributeQuotes: false
+}
 function hwpConf(lang, page) {
   return {
     template: './src/pages/' + page + '.hbs',
+    filename: lang + '/' + page + '.html',
+    minify: (process.env.NODE_ENV === 'production') ? minifyOptions : false,
+    chunks: ['app'],
     lang: lang,
-    page: page,
-    filename: lang + '/' + page + '.html'
+    page: page
   };
 }
 
 const config = {
-  entry: './src/app.js',
+  entry: {
+    app: './src/app.js',
+    languageDetection: './src/language-detection.js'
+  },
   output: {
     path: contentBase,
     publicPath: '/',
@@ -105,7 +119,10 @@ const config = {
     new MiniCssExtractPlugin({
       filename: "static/[name].css",
     }),
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin(['dist']),
+    new webpack.DefinePlugin({
+      DEFAULT_LANG: "'" + defaultLanguage + "'"
+    })
   ],
   devServer: {
     contentBase: contentBase,
@@ -116,7 +133,24 @@ const config = {
 };
 
 // Add the main index page here:
-
+config.plugins.push(
+  new HtmlPlugin({
+    template: './src/pages/index.hbs',
+    filename: 'index.html',
+    minify: (process.env.NODE_ENV === 'production') ? minifyOptions : false,
+    chunks: [{
+      name: 'languageDetection',
+      inject: 'head',
+      inline: true
+    }, {
+      name: 'app',
+      inject: 'body',
+      inline: false
+    }],
+    lang: defaultLanguage,
+    page: 'index'
+  })
+);
 
 // Add the different pages.
 // I could scan the "pages" directory.
