@@ -138,15 +138,15 @@ config.plugins.push(
     template: './src/pages/index.hbs',
     filename: 'index.html',
     minify: (process.env.NODE_ENV === 'production') ? minifyOptions : false,
-    chunks: [{
-      name: 'languageDetection',
-      inject: 'head',
-      inline: true
-    }, {
-      name: 'app',
-      inject: 'body',
-      inline: false
-    }],
+    /* I have to use this whole mess because HtmlWebpackPlugin
+     either injects everything in head, or everything in body.
+     And I wanted one of each.
+     So we're disabling injection and using an ugly helper in the template.
+    */
+     inject: false,
+    chunks: ['languageDetection', 'app'],
+    headScript: 'languageDetection',
+    bodyScript: 'app',
     lang: defaultLanguage,
     page: 'index'
   })

@@ -12,6 +12,7 @@ npm run dev
 * Use ES5 for all the rest
 
 # TODO
+[ ] Add text shadow to the headline.
 [ ] The shadow on the image-bg-overlay should be inward, not outward.
 [ ] Why am I using bootstrap?
 [ ] Try the "display" classes on hero titles. 
@@ -29,6 +30,8 @@ $fa-font-path: "~font-awesome/fonts";
 ```
  
 # Templating
+**NB**: I now regret picking handlebars because you have to write helpers for pretty much anything with that template engine, and since I'm only using it on the Node side I don't care that it's very light. Oh well.
+
 There is a webpack loader for Handlebar templates:
 ```
 loaders: [
