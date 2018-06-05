@@ -15,26 +15,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item {{{linkactive htmlWebpackPlugin.options.page 'index'}}}">
-            <a class="nav-link" href="#">{{{translate lang 'home'}}}</a>
+          <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'index'}}}">
+            <a class="nav-link" href="/{{lang}}/">{{{translate lang 'home'}}}</a>
           </li>
-          <li class="nav-item {{{linkactive htmlWebpackPlugin.options.page 'contact'}}} {{{linkactive htmlWebpackPlugin.options.page 'localisation'}}} dropdown">
+          <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'contact'}}} {{{linkActive htmlWebpackPlugin.options.page 'localisation'}}} dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{{translate lang 'contact'}}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">{{{translate lang 'addressAndSched'}}}</a>
-              <a class="dropdown-item" href="#">{{{translate lang 'contactSociety'}}}</a>
+              <a class="dropdown-item" href="/{{lang}}/localisation">{{{translate lang 'addressAndSched'}}}</a>
+              <a class="dropdown-item" href="/{{lang}}/contact">{{{translate lang 'contactSociety'}}}</a>
             </div>
           </li>
-          <li class="nav-item {{{linkactive htmlWebpackPlugin.options.page 'history'}}}">
-            <a class="nav-link" href="#">{{{translate lang 'history'}}}</a>
+          <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'history'}}}">
+            <a class="nav-link" href="/{{lang}}/historique">{{{translate lang 'history'}}}</a>
           </li>
-          <li class="nav-item {{{linkactive htmlWebpackPlugin.options.page 'cd'}}}">
-            <a class="nav-link" href="#">{{{translate lang 'audioCd'}}}</a>
+          <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'cd'}}}">
+            <a class="nav-link" href="/{{lang}}/cd">{{{translate lang 'audioCd'}}}</a>
           </li>
-          <li class="nav-item {{{linkactive htmlWebpackPlugin.options.page 'press'}}}">
-            <a class="nav-link" href="#">{{{translate lang 'press'}}}</a>
+          <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'press'}}}">
+            <a class="nav-link" href="/{{lang}}/presse">{{{translate lang 'press'}}}</a>
           </li>
         </ul>
       </div>
