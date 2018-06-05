@@ -18,6 +18,15 @@ npm run dev
 [ ] Add browser check for flex support, redirect to old site otherwise.
 [ ] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
 [ ] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
+[ ] Add all the webroot stuff, mostly the favicon, maybe a sitemap.
+[ ] Add FontAwesome, I think I can just import the SCSS.
+
+## About FontAwesome
+I've seen this import:
+```
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+```
  
 # Templating
 There is a webpack loader for Handlebar templates:

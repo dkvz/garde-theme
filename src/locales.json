@@ -9,7 +9,8 @@
     "press": "Presse",
     "contact": "Contact",
     "addressAndSched": "Adresse et horaires",
-    "contactSociety": "Contacter la société"
+    "contactSociety": "Contacter la société",
+    "readAboutUs": "Consultez notre histoire"
   },
   "en": {
     "contactUs": "Contact us!",
@@ -21,6 +22,7 @@
     "press": "Press",
     "contact": "Contact",
     "addressAndSched": "Joining us",
-    "contactSociety": "Contact us"
+    "contactSociety": "Contact us",
+    "readAboutUs": "Read more about us"
   }
 }
