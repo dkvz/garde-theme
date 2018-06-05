@@ -156,7 +156,8 @@ config.plugins.push(
 // I could scan the "pages" directory.
 languages.map(l => {
   config.plugins.push(
-    new HtmlPlugin(hwpConf(l, 'index'))
+    new HtmlPlugin(hwpConf(l, 'index')),
+    new HtmlPlugin(hwpConf(l, 'contact'))
   );
 });
 
