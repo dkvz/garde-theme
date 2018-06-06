@@ -1,5 +1,7 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
 
 .image-bg-wrapper {
   position: relative;
@@ -82,7 +84,7 @@ header {
 }
 
 .main-section-big {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .main-section {
@@ -101,4 +103,8 @@ footer {
   margin-top: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.big-spinner {
+  font-size: 34px;
 }

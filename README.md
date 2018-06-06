@@ -10,25 +10,23 @@ npm run dev
 * Semicolons
 * Use ES6 for Webpack config, imports, Handlebars helpers
 * Use ES5 for all the rest
+* Use CamelCase except for attribute names and CSS classes
 
 # TODO
 [ ] Add text shadow to the headline.
 [ ] The shadow on the image-bg-overlay should be inward, not outward.
 [ ] Why am I using bootstrap?
-[ ] Try the "display" classes on hero titles. 
+[ ] Try the "display" classes on hero titles.
+[ ] My contact from backend thingy has to be behind HTTPS or it won't work. 
 [ ] Add browser check for flex support, redirect to old site otherwise.
 [ ] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
 [ ] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
 [ ] Add all the webroot stuff, mostly the favicon, maybe a sitemap.
-[ ] Add FontAwesome, I think I can just import the SCSS.
+[X] Add FontAwesome, I think I can just import the SCSS.
 
 ## About FontAwesome
-I've seen this import:
-```
-$fa-font-path: "~font-awesome/fonts";
-@import '~font-awesome/scss/font-awesome.scss';
-```
- 
+Bootstrap doesn't have a spinner so I also included the font awesome SCSS because I need it at least for the spinner...
+
 # Templating
 **NB**: I now regret picking handlebars because you have to write helpers for pretty much anything with that template engine, and since I'm only using it on the Node side I don't care that it's very light. Oh well.
 

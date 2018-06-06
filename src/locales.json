@@ -1,6 +1,7 @@
 {
   "fr": {
     "contactUs": "Contactez-nous!",
+    "contactUsTitle": "Contact Us",
     "joinUs": "Rejoignez-nous!",
     "siteTitle": "La Musique de la Garde Impériale de Waterloo",
     "home": "Accueil",
@@ -10,10 +11,24 @@
     "contact": "Contact",
     "addressAndSched": "Adresse et horaires",
     "contactSociety": "Contacter la société",
-    "readAboutUs": "Consultez notre histoire"
+    "readAboutUs": "Consultez notre histoire",
+    "emailError": "Votre email n'a pas pu être envoyé.<br />Merci d'utiliser une adresse email mentionnée sur la page de contact",
+    "emailSent": "Votre email a été envoyé.",
+    "close": "Fermer",
+    "contactAddresses": "Adresses de contact",
+    "contactUsDirectly": "Vous pouvez nous contacter directement en envoyant un email à M. David Vandeuren:",
+    "contactVice": "Vous pouvez également contacter notre vice-président par téléphone ou courrier:",
+    "yourEmailAddress": "Votre adresse email",
+    "yourName": "Votre nom",
+    "subject": "Sujet",
+    "typeOfDemand": "Type de demande",
+    "demandForMusic": "Demande pour la Musique de la Garde Impériale de Waterloo",
+    "orderCd": "Commande de CD",
+    "send": "Envoyer"
   },
   "en": {
     "contactUs": "Contact us!",
+    "contactUsTitle": "Contactez-nous",
     "joinUs": "Join us!",
     "siteTitle": "La Musique de la Garde Impériale de Waterloo",
     "home": "Home",
@@ -23,6 +38,19 @@
     "contact": "Contact",
     "addressAndSched": "Joining us",
     "contactSociety": "Contact us",
-    "readAboutUs": "Read more about us"
+    "readAboutUs": "Read more about us",
+    "emailError": "Your email could not be sent.<br />Please use one of the email addresses present on the contact page.",
+    "emailSent": "Your email has been sent.",
+    "close": "Close",
+    "contactAddresses": "Contact addresses",
+    "contactUsDirectly": "You can contact us directly by sending an email to Mr David Vandeuren:",
+    "contactVice": "You can also contact our vice president by phone or land mail:",
+    "yourEmailAddress": "Your email address",
+    "yourName": "Your name",
+    "subject": "Subject",
+    "typeOfDemand": "Type of demand",
+    "demandForMusic": "Request for La Musique de la Garde Impériale de Waterloo",
+    "orderCd": "Order an Audio CD",
+    "send": "Send"
   }
 }

@@ -97,7 +97,8 @@ const config = {
         loader: 'handlebars-loader',
         options: {
             helperDirs: path.join(__dirname, 'src/helpers'),
-            partialDirs: path.join(__dirname, 'src/partials')
+            partialDirs: path.join(__dirname, 'src/partials'),
+            inlineRequires: '/static/'
         }
       },
       // Adding this loader in case I decide to use FontAwesome.
@@ -122,6 +123,10 @@ const config = {
     new CleanWebpackPlugin(['dist']),
     new webpack.DefinePlugin({
       DEFAULT_LANG: "'" + defaultLanguage + "'"
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     })
   ],
   devServer: {
