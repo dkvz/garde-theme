@@ -66,17 +66,18 @@ header {
 } */
 
 .hero-front h1 {
-  font-size: 4em;
   font-weight: bolder;
   letter-spacing: 12px;
   text-transform: uppercase;
   color: #fff;
+  text-shadow: #000 2px 2px;
 }
 
 .hero-front h2 {
   color: $primary;
   letter-spacing: 6px;
   color: $secondary;
+  text-shadow: #000 2px 2px;
 }
 
 .hero-front h3 {
@@ -91,11 +92,19 @@ header {
   margin-top: 40px;
 }
 
+.lang-button {
+  cursor: pointer;
+}
+
+/**
+* Be careful to check the pages in both languages
+* for the width below to make sense.
+**/
 .button-bar a {
-  width: 180px;
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
+  width: 220px;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 footer {
@@ -114,4 +123,16 @@ footer {
 
 .big-spinner {
   font-size: 34px;
+}
+
+@include media-breakpoint-up(sm) {
+  .hero-front h1 {
+    font-size: 4rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .hero-font h1 {
+    font-size: 2.5rem;
+  }
 }

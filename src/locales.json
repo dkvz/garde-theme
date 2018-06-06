@@ -24,7 +24,8 @@
     "typeOfDemand": "Type de demande",
     "demandForMusic": "Demande pour la Musique de la Garde Impériale de Waterloo",
     "orderCd": "Commande de CD",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "emailPrivacy": "Nous ne communiquerons jamais votre email à une tierce partie"
   },
   "en": {
     "contactUs": "Contact us!",
@@ -51,6 +52,7 @@
     "typeOfDemand": "Type of demand",
     "demandForMusic": "Request for La Musique de la Garde Impériale de Waterloo",
     "orderCd": "Order an Audio CD",
-    "send": "Send"
+    "send": "Send",
+    "emailPrivacy": "We'll never share your email with anyone else."
   }
 }

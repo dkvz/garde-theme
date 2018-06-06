@@ -5,6 +5,22 @@
 npm run dev
 ```
 
+# Generating the site
+**About the site path**: The site and some of its components (for instance the language picker) expect its path to start at '/'. Which means you should host the site at something like:
+
+  https://hostname.tld/
+
+And **NOT**:
+
+  https://hostname.tld/some-directory/
+
+Now to generate the website all minified:
+```
+npm run prod
+```
+
+Will populate the "dist" folder with the website files.
+
 # Code Style
 * Tab -> 2 spaces
 * Semicolons
@@ -13,10 +29,9 @@ npm run dev
 * Use CamelCase except for attribute names and CSS classes
 
 # TODO
-[ ] Add text shadow to the headline.
+[X] Add text shadow to the headline.
 [ ] The shadow on the image-bg-overlay should be inward, not outward.
 [ ] Why am I using bootstrap?
-[ ] Try the "display" classes on hero titles.
 [ ] My contact from backend thingy has to be behind HTTPS or it won't work. 
 [ ] Add browser check for flex support, redirect to old site otherwise.
 [ ] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
