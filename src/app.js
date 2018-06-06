@@ -3,7 +3,7 @@ import 'bootstrap';
 
 // Inline the text translations in this variable:
 import locales from "./locales.json";
-// Get current language for this page:
+// Get current language for this page (DEFAULT_LANG is injected by Webpack):
 var currentLang = document.documentElement.lang || DEFAULT_LANG;
 
 // Register the language picker:
@@ -26,6 +26,7 @@ for (var i = 0; i < lgLinks.length; i++) {
 
 // As usual with my projects, I'm using JQuery very sparingly so I'd have
 // less work to do if I were to completely ditch it.
+// This is really weird, do not do this please.
 if (document.getElementById('contactForm')) {
   // We're on the contact page.
   document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -52,5 +53,15 @@ if (document.getElementById('contactForm')) {
       spinner.classList.add('d-none');
       e.target.reset();
     });
+  });
+} else if (document.getElementById('scrollDownLink')) {
+  // Only the index page has a scroll down link.
+  // We'll have to write this diffrently if we're to add more animated scrolling
+  // down links.
+  document.getElementById('scrollDownLink').addEventListener('click', function() {
+    // Scroll with JQuery for their animation effect:
+    $('html, body').animate({
+      scrollTop: $("#firstSection").offset().top
+    }, 500);
   });
 }

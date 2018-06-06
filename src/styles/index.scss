@@ -92,7 +92,7 @@ header {
   margin-top: 40px;
 }
 
-.lang-button {
+.lnk-button {
   cursor: pointer;
 }
 
@@ -121,8 +121,19 @@ footer {
   padding-bottom: 10px;
 }
 
-.big-spinner {
-  font-size: 34px;
+.scroll-down {
+  position: absolute;
+  top: 88%;
+}
+
+@keyframes slip {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(20px);}
+  100% {transform: translateY(0px);}
+}
+
+a svg:hover {
+  animation: slip 0.7s ease-out 0s infinite;
 }
 
 @include media-breakpoint-up(sm) {

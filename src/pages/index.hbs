@@ -10,9 +10,16 @@
           <a href="/{{htmlWebpackPlugin.options.lang}}/contact.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'contactUs'}}}</a>
           <a href="/{{htmlWebpackPlugin.options.lang}}/localisation.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'joinUs'}}}</a>
         </div>
+        <div class="scroll-down">
+          <a class="lnk-button" id="scrollDownLink">
+            <svg width="70px" height="70px">
+              <path d="M5 30 L 35 55 L 65 30" fill="transparent" stroke="#fff" stroke-width="4" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-    <section class="container main-section">
+    <section class="container main-section" id="firstSection">
       {{{translateBlock htmlWebpackPlugin.options.lang 'intro'}}}
       <!-- Add a carousel here -->
       <a href="/historique.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'readAboutUs'}}}</a>
