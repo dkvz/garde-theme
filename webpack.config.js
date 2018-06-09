@@ -5,6 +5,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const contentBase = path.join(__dirname, 'dist');
 
 // Is your plan to never, ever split this config file into 
@@ -121,6 +122,9 @@ const config = {
       filename: "static/[name].css",
     }),
     new CleanWebpackPlugin(['dist']),
+    new CopyWebpackPlugin([
+      {from: 'webroot', to: ''}
+    ]),
     new webpack.DefinePlugin({
       DEFAULT_LANG: "'" + defaultLanguage + "'"
     }),

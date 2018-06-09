@@ -37,6 +37,7 @@ Will populate the "dist" folder with the website files.
 [ ] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
 [ ] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
 [ ] Add all the webroot stuff, mostly the favicon, maybe a sitemap.
+[ ] Add OpenGraph tags.
 [X] Add FontAwesome, I think I can just import the SCSS.
 
 ## About FontAwesome
@@ -100,6 +101,22 @@ LocalStorage falls under the same cookie-disclaimer laws though. I will start wi
 This is how the current Drupal site does it anyway, and I'm pretty sure it's got cookies and we don't disclaim anything.
 
 It might be good to have a page explaining the site doesn't use cookies. The so called "privacy statement".
+
+# Icons etc.
+I generated the icons with the realfavicongenerator website.
+
+They gave me that code to use:
+```
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+```
+
+I've put the package content in my webroot directory.
 
 # Old stuff
 
