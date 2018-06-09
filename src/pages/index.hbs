@@ -27,7 +27,7 @@
     <section class="container-fluid main-section-fluid last-section-fluid section-gradient-2">
       <div class="container">
         <hr />
-        <h1 class="display-4 text-white text-center">Nos prestations</h1>
+        <h1 class="display-4 text-white text-center">{{translate htmlWebpackPlugin.options.lang 'ourPrestations'}}</h1>
         <div id="carouselExampleIndicators" class="carousel slide shadow-lg" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -36,9 +36,9 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="../../static/car_reconst_1920.jpg" alt="Reconstitutions" />
+              <img class="d-block w-100" src="../../static/car_reconst_1920.jpg" alt="{{{translate htmlWebpackPlugin.options.lang 'historicalReenactments'}}}" />
               <div class="carousel-caption d-none d-md-block">
-                <h1>Reconstitutions</h1>
+                <h1>{{{translate htmlWebpackPlugin.options.lang 'historicalReenactments'}}}</h1>
               </div>
             </div>
             <div class="carousel-item">

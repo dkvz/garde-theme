@@ -25,7 +25,9 @@
     "demandForMusic": "Demande pour la Musique de la Garde Impériale de Waterloo",
     "orderCd": "Commande de CD",
     "send": "Envoyer",
-    "emailPrivacy": "Nous ne communiquerons jamais votre email à une tierce partie"
+    "emailPrivacy": "Nous ne communiquerons jamais votre email à une tierce partie",
+    "ourPrestations": "Nos prestations",
+    "historicalReenactments": "Reconstitutions historiques"
   },
   "en": {
     "contactUs": "Contact us!",
@@ -53,6 +55,8 @@
     "demandForMusic": "Request for La Musique de la Garde Impériale de Waterloo",
     "orderCd": "Order an Audio CD",
     "send": "Send",
-    "emailPrivacy": "We'll never share your email with anyone else."
+    "emailPrivacy": "We'll never share your email with anyone else.",
+    "ourPrestations": "What we do",
+    "historicalReenactments": "Historical reenactments"
   }
 }
