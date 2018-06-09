@@ -94,12 +94,20 @@ header {
 
 .main-section-fluid {
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
+}
+
+.last-section-fluid {
+  padding-bottom: 100px;
 }
 
 .section-gradient-1 {
   background-color: map-get($theme-colors, secondary);
   background: linear-gradient(to bottom, $dark-bg, map-get($theme-colors, secondary));
+}
+
+.section-gradient-2 {
+  background-color: map-get($theme-colors, secondary);
 }
 
 .lnk-button {
@@ -119,7 +127,6 @@ header {
 
 footer {
   background-color: $dark-bg;
-  margin-top: 80px;
   padding-top: 30px;
   width: 100%;
 }
