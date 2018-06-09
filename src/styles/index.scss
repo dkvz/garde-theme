@@ -92,6 +92,16 @@ header {
   margin-top: 40px;
 }
 
+.main-section-fluid {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.section-gradient-1 {
+  background-color: map-get($theme-colors, secondary);
+  background: linear-gradient(to bottom, $dark-bg, map-get($theme-colors, secondary));
+}
+
 .lnk-button {
   cursor: pointer;
 }
@@ -124,6 +134,16 @@ footer {
 .scroll-down {
   position: absolute;
   top: 88%;
+}
+
+.navbar-img {
+  border-bottom: 2px solid map-get($theme-colors, secondary);
+}
+
+@keyframes lul {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
 }
 
 @keyframes slip {
