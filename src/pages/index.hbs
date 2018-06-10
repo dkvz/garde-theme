@@ -1,34 +1,39 @@
-  {{> header lang=htmlWebpackPlugin.options.lang}}
-    <div class="image-bg-wrapper">
-      <div class="image-bg"></div>
-      <div class="image-bg-overlay shadow"></div>
-      <div class="hero-front">
-        <h1>Musique</h1>
-        <h2>Du premier régiment des grenadiers à pied de la Garde Impériale</h2>
-        <h3>Waterloo</h3>
-        <div class="button-bar">
-          <a href="/{{htmlWebpackPlugin.options.lang}}/contact.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'contactUs'}}}</a>
-          <a href="/{{htmlWebpackPlugin.options.lang}}/localisation.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'joinUs'}}}</a>
-        </div>
-        <div class="scroll-down">
-          <a class="lnk-button" id="scrollDownLink">
-            <svg width="70px" height="70px">
-              <path d="M5 30 L 35 55 L 65 30" fill="transparent" stroke="#fff" stroke-width="4" />
-            </svg>
-          </a>
-        </div>
-      </div>
+ {{> header lang=htmlWebpackPlugin.options.lang}}
+<div class="image-bg-wrapper">
+  <div class="image-bg"></div>
+  <div class="image-bg-overlay shadow"></div>
+  <div class="hero-front">
+    <h1>Musique</h1>
+    <h2>Du premier régiment des grenadiers à pied de la Garde Impériale</h2>
+    <h3>Waterloo</h3>
+    <div class="button-bar">
+      <a href="/{{htmlWebpackPlugin.options.lang}}/contact.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'contactUs'}}}</a>
+      <a href="/{{htmlWebpackPlugin.options.lang}}/localisation.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'joinUs'}}}</a>
     </div>
-    <section class="container-fluid main-section-fluid section-gradient-1" id="firstSection">
-      <div class="container">
-        {{{translateBlock htmlWebpackPlugin.options.lang 'intro_card'}}}
+    <div class="scroll-down">
+      <a class="lnk-button" id="scrollDownLink">
+        <svg width="70px" height="70px">
+          <path d="M5 30 L 35 55 L 65 30" fill="transparent" stroke="#fff" stroke-width="4" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+<section class="container-fluid main-section-fluid section-gradient-1" id="firstSection">
+  <div class="container">
+    {{{translateBlock htmlWebpackPlugin.options.lang 'intro_card'}}}
+  </div>
+</section>
+<section class="container-fluid main-section-fluid last-section-fluid section-gradient-2">
+  <div class="container">
+    <hr />
+    <div class="card text-white bg-dark shadow-lg">
+      <div class="card-header">
+        <h1 class="text-white text-center">{{translate htmlWebpackPlugin.options.lang 'ourPrestations'}}</h1>
       </div>
-    </section>
-    <section class="container-fluid main-section-fluid last-section-fluid section-gradient-2">
-      <div class="container">
-        <hr />
-        <h1 class="display-4 text-white text-center">{{translate htmlWebpackPlugin.options.lang 'ourPrestations'}}</h1>
-        <div id="carouselExampleIndicators" class="carousel slide shadow-lg" data-ride="carousel">
+      <div class="card-body">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -36,21 +41,22 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="../../static/car_reconst_1920.jpg" alt="{{{translate htmlWebpackPlugin.options.lang 'historicalReenactments'}}}" />
+              <img class="d-block w-100" src="../../static/car_reconst_1920.jpg" alt="{{{translate htmlWebpackPlugin.options.lang 'historicalReenactments'}}}"
+              />
               <div class="carousel-caption d-none d-md-block">
                 <h1>{{{translate htmlWebpackPlugin.options.lang 'historicalReenactments'}}}</h1>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="../../static/car_defile.jpg" alt="Défilés" />
+              <img class="d-block w-100" src="../../static/car_defile.jpg" alt="{{{translate htmlWebpackPlugin.options.lang 'parades'}}}" />
               <div class="carousel-caption d-none d-md-block">
-                <h1>Défilés</h1>
+                <h1>{{{translate htmlWebpackPlugin.options.lang 'parades'}}}</h1>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="../../static/car_sitting_1920.jpg" alt="Concerts assis">
+              <img class="d-block w-100" src="../../static/car_sitting_1920.jpg" alt="{{{translate htmlWebpackPlugin.options.lang 'sittingConcerts'}}}">
               <div class="carousel-caption d-none d-md-block">
-                <h1>Concerts statiques</h1>
+                <h1>{{{translate htmlWebpackPlugin.options.lang 'sittingConcerts'}}}</h1>
               </div>
             </div>
           </div>
@@ -64,5 +70,7 @@
           </a>
         </div>
       </div>
-    </section>
-  {{> footer lang=htmlWebpackPlugin.options.lang}}
+    </div>
+  </div>
+</section>
+{{> footer lang=htmlWebpackPlugin.options.lang}}

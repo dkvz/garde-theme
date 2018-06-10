@@ -27,7 +27,9 @@
     "send": "Envoyer",
     "emailPrivacy": "Nous ne communiquerons jamais votre email à une tierce partie",
     "ourPrestations": "Nos prestations",
-    "historicalReenactments": "Reconstitutions historiques"
+    "historicalReenactments": "Reconstitutions historiques",
+    "parades": "Défilés",
+    "sittingConcerts": "Concerts statiques"
   },
   "en": {
     "contactUs": "Contact us!",
@@ -57,6 +59,8 @@
     "send": "Send",
     "emailPrivacy": "We'll never share your email with anyone else.",
     "ourPrestations": "What we do",
-    "historicalReenactments": "Historical reenactments"
+    "historicalReenactments": "Historical reenactments",
+    "parades": "Parades - Walking and playing",
+    "sittingConcerts": "Sitting concerts"
   }
 }

@@ -166,7 +166,8 @@ config.plugins.push(
 languages.map(l => {
   config.plugins.push(
     new HtmlPlugin(hwpConf(l, 'index')),
-    new HtmlPlugin(hwpConf(l, 'contact'))
+    new HtmlPlugin(hwpConf(l, 'contact')),
+    new HtmlPlugin(hwpConf(l, 'historique'))
   );
 });
 
