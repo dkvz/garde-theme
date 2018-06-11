@@ -115,6 +115,47 @@ header {
   background-color: map-get($theme-colors, secondary);
 }
 
+.section-light, .section-dark {
+  line-height: 2em;
+}
+
+.section-dark {
+  background-color: $dark-bg;
+}
+
+.section-light {
+  background-color: map-get($theme-colors, light);
+}
+
+/** Parallax stuff **/
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* This is what actually does the parallax */
+  background-attachment: fixed;
+  /* Setting it to "scroll" (default?) will remove the parallax effect */
+  /* We may want to remove it for mobile devices ! */
+}
+
+.pimg1 {
+  background-image: url('../../static/par1.jpg');
+  min-height: 200px;
+}
+
+.pimg2 {
+  background-image: url('../../static/par2.jpg');
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url('../../static/par3.jpg');
+  min-height: 300px;
+}
+/** End of parallax stuff **/
+
 .lnk-button {
   cursor: pointer;
 }
