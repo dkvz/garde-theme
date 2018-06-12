@@ -73,6 +73,13 @@ header {
   text-shadow: #000 2px 2px;
 }
 
+.page-title-backdrop {
+  background-color: $dark-bg;
+  padding: 20px;
+  border: 1px solid map-get($theme-colors, light);
+  display: inline;
+}
+
 .hero-front h2 {
   color: $primary;
   letter-spacing: 6px;
