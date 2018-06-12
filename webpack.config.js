@@ -95,6 +95,18 @@ const config = {
         ]
       },
       {
+        test: /\.pdf$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1,
+              name: 'static/[name].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
         options: {
@@ -174,7 +186,8 @@ languages.map(l => {
     new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle')),
     new HtmlPlugin(hwpConf(l, 'historique', 'history')),
     new HtmlPlugin(hwpConf(l, 'localisation', 'addressAndSched')),
-    new HtmlPlugin(hwpConf(l, 'cd', 'audioCd'))
+    new HtmlPlugin(hwpConf(l, 'cd', 'audioCd')),
+    new HtmlPlugin(hwpConf(l, 'presse', 'press'))
   );
 });
 
