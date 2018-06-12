@@ -32,7 +32,12 @@
     "sittingConcerts": "Concerts statiques",
     "accessToRehearsal": "Accès au local de répétitions",
     "googleMapLink": "Lien vers Google Maps",
-    "parking": "Parking dans la cour de l'école."
+    "parking": "Parking dans la cour de l'école.",
+    "cdAvailable": "Le premier CD de La Musique de la Garde est disponible à la vente.",
+    "cdContains": "Il comprend 16 morceaux de notre répertoire",
+    "title": "Titre",
+    "author": "Auteur",
+    "dontHesitateToCU": "N'hésitez-pas à contacter la société si vous souhaitez obtenir un CD"
   },
   "en": {
     "contactUs": "Contact us!",
@@ -67,6 +72,11 @@
     "sittingConcerts": "Sitting concerts",
     "accessToRehearsal": "Access",
     "googleMapLink": "Google maps link",
-    "parking": "Cars can park on the school grounds through the front entrance."
+    "parking": "Cars can park on the school grounds through the front entrance.",
+    "cdAvailable": "The first CD of La Musique de la Garde is now available for sale.",
+    "cdContains": "The CD holds 16 songs from our repertoire",
+    "title": "Title",
+    "author": "Author",
+    "dontHesitateToCU": "Do not hesitate to contact us if you want to acquire a copy of the CD"
   }
 }

@@ -1,0 +1,119 @@
+{{> header lang=htmlWebpackPlugin.options.lang}}
+<section class="container-fluid main-section-fluid-first section-dark">
+  <div class="text-center mb-5">
+    <h1 class="page-title">{{{translate htmlWebpackPlugin.options.lang 'audioCd'}}}</h1>
+  </div>
+  <div class="container text-light section-text">
+    <p>
+      {{translate htmlWebpackPlugin.options.lang 'cdAvailable'}}
+    </p>
+    <p>
+      {{translate htmlWebpackPlugin.options.lang 'cdContains'}}:
+    </p>
+  </div>
+  <div class="container">
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">{{translate htmlWebpackPlugin.options.lang 'title'}}</th>
+          <th scope="col">{{translate htmlWebpackPlugin.options.lang 'author'}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Le Chant du Départ</td>
+          <td>E. Méhul</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Le pas Cadencé des Sans-Culottes</td>
+          <td>MGIW</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Marche de la Garde Consulaire à Marengo</td>
+          <td>J. Furgeot</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Honneur au Premier Consul</td>
+          <td>G. Paesiello</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Marche du Sacre de Napoléon 1
+            <sup>er</sup>
+          </td>
+          <td>J.F. Lesueur</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Veillons au Salut de l'Empire</td>
+          <td>N. Delayrac</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Marche des Bonnets à Poils</td>
+          <td>J. Furgeot</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>La Favorite</td>
+          <td>J. Furgeot</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Batterie d'Austerlitz</td>
+          <td>MGIW</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>Marche de la Vieille Garde à Leipzig</td>
+          <td>J. Furgeot</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>Le Champ d'Honneur</td>
+          <td>R. Fayeulle</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>Marche des Eclopés</td>
+          <td>MGIW</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td>La Grenadière</td>
+          <td>MGIW</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td>14 Adieux des Chasseurs à Cheval de la Garde aux Lanciers Polonais</td>
+          <td>MGIW</td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td>Les Grenadiers de la Vieille Garde à Waterloo</td>
+          <td>C. Eustache</td>
+        </tr>
+        <tr>
+          <th scope="row">16</th>
+          <td>Marche des Marseillois</td>
+          <td>C.J. Rouget de Lisle</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container text-light section-text">
+    <p>{{translate htmlWebpackPlugin.options.lang 'dontHesitateToCU'}}:&nbsp;<a href="/{{htmlWebpackPlugin.options.lang}}/contact.html" class="btn btn-primary btn-lg">{{{translate htmlWebpackPlugin.options.lang 'contactUsTitle'}}}</a></p>
+  </div>
+</section>
+<section class="container-fluid main-section-fluid section-light">
+  <div class="container">
+    <img src="../../static/cdav.jpg" class="img-fluid mx-auto d-block mb-5 shadow" alt="Pochette CD" />
+    <img src="../../static/cdar.jpg" class="img-fluid mx-auto d-block shadow" alt="Pochette CD" />
+  </div>
+</section>
+{{> footer lang=htmlWebpackPlugin.options.lang}}

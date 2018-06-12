@@ -173,7 +173,8 @@ languages.map(l => {
     new HtmlPlugin(hwpConf(l, 'index')),
     new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle')),
     new HtmlPlugin(hwpConf(l, 'historique', 'history')),
-    new HtmlPlugin(hwpConf(l, 'localisation', 'addressAndSched'))
+    new HtmlPlugin(hwpConf(l, 'localisation', 'addressAndSched')),
+    new HtmlPlugin(hwpConf(l, 'cd', 'audioCd'))
   );
 });
 
