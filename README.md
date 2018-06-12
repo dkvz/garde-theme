@@ -40,6 +40,7 @@ Will populate the "dist" folder with the website files.
 [ ] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
 [ ] Add all the webroot stuff, mostly the favicon, maybe a sitemap.
 [ ] Add OpenGraph tags.
+[ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.
 [X] Add FontAwesome, I think I can just import the SCSS.
 [ ] Now that I got FontAwesome I might as well use icons in... Places.
 

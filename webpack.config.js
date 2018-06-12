@@ -142,6 +142,10 @@ const config = {
   devtool: (process.env.NODE_ENV === 'production') ? false : 'source-map'
 };
 
+// Since we're generating a static site with Webpack
+// We now have to add a whole bunch of instances of
+// HtmlWebpackPlugin. Pure elegance.
+
 // Add the main index page here:
 config.plugins.push(
   new HtmlPlugin({
@@ -168,7 +172,8 @@ languages.map(l => {
   config.plugins.push(
     new HtmlPlugin(hwpConf(l, 'index')),
     new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle')),
-    new HtmlPlugin(hwpConf(l, 'historique', 'history'))
+    new HtmlPlugin(hwpConf(l, 'historique', 'history')),
+    new HtmlPlugin(hwpConf(l, 'localisation', 'addressAndSched'))
   );
 });
 

@@ -29,7 +29,10 @@
     "ourPrestations": "Nos prestations",
     "historicalReenactments": "Reconstitutions historiques",
     "parades": "Défilés",
-    "sittingConcerts": "Concerts statiques"
+    "sittingConcerts": "Concerts statiques",
+    "accessToRehearsal": "Accès au local de répétitions",
+    "googleMapLink": "Lien vers Google Maps",
+    "parking": "Parking dans la cour de l'école."
   },
   "en": {
     "contactUs": "Contact us!",
@@ -61,6 +64,9 @@
     "ourPrestations": "What we do",
     "historicalReenactments": "Historical reenactments",
     "parades": "Parades - Walking and playing",
-    "sittingConcerts": "Sitting concerts"
+    "sittingConcerts": "Sitting concerts",
+    "accessToRehearsal": "Access",
+    "googleMapLink": "Google maps link",
+    "parking": "Cars can park on the school grounds through the front entrance."
   }
 }
