@@ -65,7 +65,7 @@ header {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } */
 
-.hero-front h1 {
+.hero-front h1, h1.page-title {
   font-weight: bolder;
   letter-spacing: 12px;
   text-transform: uppercase;
@@ -116,7 +116,8 @@ header {
 }
 
 .section-light, .section-dark {
-  line-height: 2em;
+  line-height: 2rem;
+  font-size: 1.2rem;
 }
 
 .section-dark {
@@ -213,14 +214,72 @@ a svg:hover {
   animation: slip 0.7s ease-out 0s infinite;
 }
 
-@include media-breakpoint-up(sm) {
-  .hero-front h1 {
-    font-size: 4rem;
+/* 
+Very specific breakpoint for < 320px screens
+and hiding the navbar image
+*/
+@media (max-width: 350px) {
+  .navbar-brand {
+    display: none;
   }
 }
 
-@include media-breakpoint-up(md) {
-  .hero-font h1 {
+@include media-breakpoint-up(xs) {
+  .hero-front h1, h1.page-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-front h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-front h3 {
+    font-size: 1.2rem;
+  }
+
+}
+
+@include media-breakpoint-up(sm) {
+  .hero-front h1, h1.page-title {
     font-size: 2.5rem;
   }
+
+  .hero-front h2 {
+    font-size: 2rem;
+  }
+
+  .hero-front h3 {
+    font-size: 1.6rem;
+  }
+
+}
+
+@include media-breakpoint-up(md) {
+  .hero-front h1, h1.page-title {
+    font-size: 3rem;
+  }
+
+  .hero-front h2 {
+    font-size: 2.4rem;
+  }
+
+  .hero-front h3 {
+    font-size: 1.8rem;
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+  .hero-front h1, h1.page-title {
+    font-size: 4rem;
+  }
+
+  .hero-front h2 {
+    font-size: 3rem;
+  }
+
+  .hero-front h3 {
+    font-size: 2rem;
+  }
+
 }

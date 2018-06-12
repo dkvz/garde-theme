@@ -30,6 +30,8 @@ Will populate the "dist" folder with the website files.
 
 # TODO
 [X] Add text shadow to the headline.
+[ ] Add animations for the stuff in the hero for the index page.
+[ ] Test the font sizes with the responsive tool of browsers.
 [ ] The shadow on the image-bg-overlay should be inward, not outward.
 [ ] Why am I using bootstrap?
 [ ] My contact from backend thingy has to be behind HTTPS or it won't work. 
@@ -101,6 +103,14 @@ LocalStorage falls under the same cookie-disclaimer laws though. I will start wi
 This is how the current Drupal site does it anyway, and I'm pretty sure it's got cookies and we don't disclaim anything.
 
 It might be good to have a page explaining the site doesn't use cookies. The so called "privacy statement".
+
+# Page titles
+I copied the style in the index hero to use as page title like so:
+```
+  <div class="text-center mb-5">
+    <h1 class="page-title">Historique</h1>
+  </div>
+```
 
 # Icons etc.
 I generated the icons with the realfavicongenerator website.
