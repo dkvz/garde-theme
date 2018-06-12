@@ -24,14 +24,15 @@ const minifyOptions = {
   collapseWhitespace: true,
   removeAttributeQuotes: false
 }
-function hwpConf(lang, page) {
+function hwpConf(lang, page, pageTitle) {
   return {
     template: './src/pages/' + page + '.hbs',
     filename: lang + '/' + page + '.html',
     minify: (process.env.NODE_ENV === 'production') ? minifyOptions : false,
     chunks: ['app'],
     lang: lang,
-    page: page
+    page: page,
+    pageTitle: pageTitle ? pageTitle : undefined
   };
 }
 
@@ -152,7 +153,7 @@ config.plugins.push(
      And I wanted one of each.
      So we're disabling injection and using an ugly helper in the template.
     */
-     inject: false,
+    inject: false,
     chunks: ['languageDetection', 'app'],
     headScript: 'languageDetection',
     bodyScript: 'app',
@@ -166,8 +167,8 @@ config.plugins.push(
 languages.map(l => {
   config.plugins.push(
     new HtmlPlugin(hwpConf(l, 'index')),
-    new HtmlPlugin(hwpConf(l, 'contact')),
-    new HtmlPlugin(hwpConf(l, 'historique'))
+    new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle')),
+    new HtmlPlugin(hwpConf(l, 'historique', 'history'))
   );
 });
 
