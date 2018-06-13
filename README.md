@@ -1,11 +1,31 @@
-# Weird attempt at Web Design
+# Attempt at Web Design - Case Study #0
+The project was originally supposed to be a Hugo theme generated through Webpack.
 
-# Dev server
+It ended up being the whole site generated through Webpack because that was faster to do than learning about Hugo templating and configure everything over there.
+
+However, just using Webpack would probably be unpractical and take too much time if I had a lot of pages on the site (I'm thinking if there was a blog section).
+
+About that, be patient if you run the dev server or build the site on a slow computer.
+
+## Installing
+This project requires NodeJS 8+.
+
+To install, clone the repo and run:
+```
+npm install
+```
+Inside the project directory.
+
+## Dev server
+Just run:
 ```
 npm run dev
 ```
+Access the website on http://localhost:8081
 
-# Generating the site
+If you see errors, maybe a Webpack dependency now depends on something new or different that you need to install manually through npm.
+
+## Generating the site
 **About the site path**: The site and some of its components (for instance the language picker) expect its path to start at '/'. Which means you should host the site at something like:
 
   https://hostname.tld/
@@ -21,33 +41,39 @@ npm run prod
 
 Will populate the "dist" folder with the website files.
 
-# Code Style
+## Note about the backend
+The contact form depends on a weird backend form that I use because I'm against serverless services for religious reasons.
+
+## Code Style
 * Tab -> 2 spaces
 * Semicolons
 * Use ES6 for Webpack config, imports, Handlebars helpers
 * Use ES5 for all the rest
 * Use CamelCase except for attribute names and CSS classes
 
-# TODO
-[X] Add text shadow to the headline.
-[ ] Add animations for the stuff in the hero for the index page.
-[ ] Test the font sizes with the responsive tool of browsers.
-[ ] The shadow on the image-bg-overlay should be inward, not outward.
-[ ] Why am I using bootstrap?
-[ ] My contact form backend thingy has to be behind HTTPS or it won't work. 
-[ ] Add browser check for flex support, redirect to old site otherwise.
-[ ] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
-[ ] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
-[ ] Add all the webroot stuff, mostly the favicon, maybe a sitemap.
-[ ] Add OpenGraph tags.
-[ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.
-[X] Add FontAwesome, I think I can just import the SCSS.
-[ ] Now that I got FontAwesome I might as well use icons in... Places.
+I made the translateBlock.js Handlebars helper so that I would not have HTML inside locales.json. It's a weird requirement I made up in my head for some reason, don't judge me.
 
-## About FontAwesome
+## TODO
+- [x] Add text shadow to the headline.
+- [ ] Add animations for the stuff in the hero for the index page.
+- [x] Test the font sizes with the responsive tool of browsers.
+- [ ] The shadow on the image-bg-overlay should be inward, not outward.
+- [ ] Why am I using bootstrap?
+- [ ] My contact form backend thingy has to be behind HTTPS or it won't work. 
+- [ ] Add browser check for flex support, redirect to old site otherwise.
+- [x] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
+- [x] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
+- [x] Add all the webroot stuff, mostly the favicons
+- [ ] Add a sitemap
+- [ ] Add OpenGraph tags.
+- [ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.
+- [x] Add FontAwesome, I think I can just import the SCSS.
+- [ ] Now that I got FontAwesome I might as well use icons in... Places.
+
+### About FontAwesome
 Bootstrap doesn't have a spinner so I also included the font awesome SCSS because I need it at least for the spinner...
 
-# Templating
+## Templating
 **NB**: I now regret picking handlebars because you have to write helpers for pretty much anything with that template engine, and since I'm only using it on the Node side I don't care that it's very light. Oh well.
 
 There is a webpack loader for Handlebar templates:
@@ -72,14 +98,14 @@ This example also creates a list of instances of HtmlWebpackPlugin for each page
 const pages = fs.readdirSync(DIR_PAGES).filter(fileName => REGEX_HBS.test(fileName));
 ```
 
-## Pass information to tempaltes
+### Pass information to tempaltes
 To give information such as language to a template, this explains how to do it I think: https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates
 
 I need to pass the language to templates to decide on what to display.
 
 The parameters have to get passed to the partials or it won't work.
 
-## Helpers with Webpack
+### Helpers with Webpack
 You can apparently export the function with the correct script filename and it works:
 ```
 module.exports = function (key, short) {
@@ -93,7 +119,7 @@ Then provided my module file here is named 'translate.js', I can use the functio
 
 Don't forget to add "helpersDir" to the hbr loader for the resolution to work the easiest.
 
-## Index page
+### Index page
 For SEO reasons, I think my index page should be the full "default language" page (so with app.js as well) but with an additional JS file in head which will do the redirect according to language and the modernizr redirect.
 
 That way if a search engine doesn't apply the redirect it's still getting the whole page.
@@ -106,7 +132,7 @@ This is how the current Drupal site does it anyway, and I'm pretty sure it's got
 
 It might be good to have a page explaining the site doesn't use cookies. The so called "privacy statement".
 
-# Page titles
+## Page titles
 I copied the style in the index hero to use as page title like so:
 ```
   <div class="text-center mb-5">
@@ -114,7 +140,7 @@ I copied the style in the index hero to use as page title like so:
   </div>
 ```
 
-# Icons etc.
+## Icons etc.
 I generated the icons with the realfavicongenerator website.
 
 They gave me that code to use:
@@ -130,7 +156,8 @@ They gave me that code to use:
 
 I've put the package content in my webroot directory.
 
-# Old stuff
+## Old stuff
+**DON'T READ THIS**
 
 Use this instead:
 ```

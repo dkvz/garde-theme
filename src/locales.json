@@ -37,7 +37,17 @@
     "cdContains": "Il comprend 16 morceaux de notre répertoire",
     "title": "Titre",
     "author": "Auteur",
-    "dontHesitateToCU": "N'hésitez-pas à contacter la société si vous souhaitez obtenir un CD"
+    "dontHesitateToCU": "N'hésitez-pas à contacter la société si vous souhaitez obtenir un CD",
+    "pressLink1": "La garde dans Waterloo info en 1994 (Les 20 ans de la garde)",
+    "pressLink2": "La garde dans la Dernière Heure en 1996 (La garde à St-Pétersbourg)",
+    "pressLink3": "L'Indépendance dans Waterloo info en 2003 (concert de fin d'année)",
+    "pressLink4": "La garde dans Waterloo info 2004 (Tour de France)",
+    "pressLink5": "L'Indépendance dans Waterloo info 2006 (la fête de la musique)",
+    "pressLink6": "La garde dans Waterloo info 2006 (bataille d'Iéna)",
+    "pressLink7": "L'Indépendance dans Waterloo info 2006 (Concert d'automne « Les Années Swing »)",
+    "pressLink8": "L'Indépendance dans Waterloo info 2007 (Concert d'automne « Les grands moments de la chanson ») Napoléon 1er",
+    "pressDesc": "Ci-dessous quelques articles de presse où paraît la Musique de la Garde.",
+    "websiteSource": "Code source du site"
   },
   "en": {
     "contactUs": "Contact us!",
@@ -77,6 +87,16 @@
     "cdContains": "The CD holds 16 songs from our repertoire",
     "title": "Title",
     "author": "Author",
-    "dontHesitateToCU": "Do not hesitate to contact us if you want to acquire a copy of the CD"
+    "dontHesitateToCU": "Do not hesitate to contact us if you want to acquire a copy of the CD",
+    "pressLink1": "La garde in Waterloo info in 1994",
+    "pressLink2": "La garde in « la Dernière Heure » in 1996 (La garde at St-Pétersbourg)",
+    "pressLink3": "L'Indépendance in Waterloo info in 2003 (end of year concert)",
+    "pressLink4": "La garde in Waterloo info 2004 (Tour de France)",
+    "pressLink5": "L'Indépendance in Waterloo info 2006",
+    "pressLink6": "La garde in Waterloo info 2006 (Battle of Iéna)",
+    "pressLink7": "L'Indépendance in Waterloo info 2006 (Concert « Les Années Swing »)",
+    "pressLink8": "L'Indépendance in Waterloo info 2007 (Concert « Les grands moments de la chanson ») Napoléon 1er",
+    "pressDesc": "Please find hereunder some press articles (in french) featuring \"La Musique de le Garde\".",
+    "websiteSource": "Website source code"
   }
 }

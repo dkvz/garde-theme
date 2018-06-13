@@ -1,49 +1,56 @@
 </main>
-<footer>
+<footer class="shadow">
+  {{> facebook}}
   <div class="container">
     <div class="row">
-      <div class="col-sm">
-        <h2 class="text-muted">MDG</h2>
+      <div class="col-sm mb-3">
+        <h2 class="text-light">MDG</h2>
         <ul class="nav flex-column">
           <li>
-            <a class="text-secondary" href="#">Active</a>
+            <a class="text-secondary" href="/{{lang}}/">{{{translate lang 'home'}}}</a>
           </li>
           <li>
-            <a class="text-secondary" href="#">Link</a>
+            <a class="text-secondary" href="/{{lang}}/contact.html">{{{translate lang 'contactSociety'}}}</a>
           </li>
           <li>
-            <a class="text-secondary" href="#">Link</a>
+            <a class="text-secondary" href="/{{lang}}/historique.html">{{{translate lang 'history'}}}</a>
           </li>
           <li>
-            <a class="text-secondary" href="#">Disabled</a>
+            <a class="text-secondary" href="/{{lang}}/cd.html">{{{translate lang 'audioCd'}}}</a>
+          </li>
+          <li>
+            <a class="text-secondary" href="/{{lang}}/presse.html">{{{translate lang 'press'}}}</a>
           </li>
         </ul>
       </div>
-      <div class="col-sm">
-        <h2 class="text-muted">Social</h2>    
+      <div class="col-sm mb-3">
+        <h2 class="text-light">Social</h2>    
         <ul class="nav flex-column">
             <li>
-              <a class="text-secondary" href="#">Active</a>
+              <a class="text-secondary" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+Facebook</a>
             </li>
             <li>
-              <a class="text-secondary" href="#">Link</a>
+              <a class="text-secondary" href="https://www.youtube.com/channel/UCjpT4EJ_yg3C88qraFW1z5w" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+Youtube</a>
             </li>
             <li>
-              <a class="text-secondary" href="#">Link</a>
+              <a class="text-secondary" href="https://independance-musicale.be" target="_blank">L'indépendance musicale</a>
             </li>
             <li>
-              <a class="text-secondary" href="#">Disabled</a>
+              <a class="text-secondary" href="https://github.com/dkvz/garde-theme" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+{{{translate lang 'websiteSource'}}}</a>
             </li>
           </ul>
       </div>
-      <div class="col-sm">
-        ICONE FACEBOOK
+      <div class="col-sm mb-3">
+        <div class="fb-page" data-href="https://www.facebook.com/MusiqueDeLaGarde/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/MusiqueDeLaGarde/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/MusiqueDeLaGarde/">Musique du 1er Régiment des Grenadiers à Pied de la Garde - Waterloo</a></blockquote></div>
       </div>
     </div>
   </div>
   <div class="copyr text-muted">
     <div class="container">
-      Copyright © 2018 La Musique de la Garde Impérale de Waterloo 
+      Copyright © 2018 La Musique de la Garde Impérale de Waterloo &mdash; Design by <a class="text-light" href="https://dkvz.eu" target="_blank">dkvz.eu</a>
     </div>
   </div>
 </footer>
