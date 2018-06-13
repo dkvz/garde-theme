@@ -1,6 +1,14 @@
 import './styles/index.scss';
 import 'bootstrap';
 
+// Check browser compatibility:
+var oldSite = 'http://old.lamusiquedelagarde.be';
+import './old-browser-detection.js';
+
+if (!Modernizr.flexbox) {
+  window.location.replace(oldSite);
+}
+
 // Inline the text translations in this variable:
 import locales from "./locales.json";
 // Get current language for this page (DEFAULT_LANG is injected by Webpack):

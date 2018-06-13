@@ -17,6 +17,9 @@ const languages = ['fr', 'en'];
 // The main index page will be generated using the
 // default language.
 const defaultLanguage = 'fr';
+// This is passed to the templates and used in some metatags:
+// (NO TRAILING SLASH Plz Sorry For CaPS)
+const absoluteUrl = 'https://2018.lamusiquedelagarde.be';
 
 // Generates config objects for HtmlWebpackPlugin instances:
 const minifyOptions = {
@@ -32,6 +35,7 @@ function hwpConf(lang, page, pageTitle) {
     chunks: ['app'],
     lang: lang,
     page: page,
+    absoluteUrl: absoluteUrl,
     pageTitle: pageTitle ? pageTitle : undefined
   };
 }
@@ -174,7 +178,8 @@ config.plugins.push(
     headScript: 'languageDetection',
     bodyScript: 'app',
     lang: defaultLanguage,
-    page: 'index'
+    page: 'index',
+    absoluteUrl: absoluteUrl
   })
 );
 

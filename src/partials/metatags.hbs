@@ -1,0 +1,13 @@
+<meta name="description" content="{{translate lang 'metaDescription'}}">
+<meta property="og:title" content="{{#if htmlWebpackPlugin.options.pageTitle}}{{translate lang htmlWebpackPlugin.options.pageTitle}} | {{/if}}{{translate lang 'siteTitle'}}">
+<meta property="og:site_name" content="La Musique de la Garde Impériale de Waterloo">
+<meta property="og:url" content="{{htmlWebpackPlugin.options.absoluteUrl}}/{{lang}}/{{#if htmlWebpackPlugin.options.page}}{{htmlWebpackPlugin.options.page}}.html{{/if}}">
+<meta property="og:description" content="{{translate lang 'metaDescription'}}">
+<meta property="og:type" content="website">
+{{!-- 
+This has to be something from webroot, other images have hashed filenames and 
+a target folder that could possibly change.
+--}}
+<meta property="og:image" content="{{htmlWebpackPlugin.options.absoluteUrl}}/android-chrome-256x256.png">
+<meta property="og:image:width" content="256">
+<meta property="og:image:height" content="256">

@@ -16,6 +16,14 @@ npm install
 ```
 Inside the project directory.
 
+## Configuration
+The absolute URL for the website must be set in webpack.config.js.
+
+Also, app.js needs the "old" website URL to redirect in case of unsupported browser. 
+It could be a relative URL to some sort of "Unsupported browser" page. In my case it forwards to a static version of the "old" Drupal website.
+
+All the translations are either in locales.json or partials/blocks.
+
 ## Dev server
 Just run:
 ```
@@ -65,8 +73,10 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 - [x] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
 - [x] Add all the webroot stuff, mostly the favicons
 - [ ] Add a sitemap
-- [ ] Add OpenGraph tags.
-- [ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.
+- [x] Add OpenGraph tags.
+- [x] Test the OpenGraph tags.
+- [ ] Add the alternatives meta tags relative to the two language versions.
+- ~~[ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.~~
 - [x] Add FontAwesome, I think I can just import the SCSS.
 - [x] Now that I got FontAwesome I might as well use icons in... Places.
 - [ ] Generate a static version of the "old site" to use as the actual old site so we can ditch Drupal.
