@@ -68,10 +68,23 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 - [ ] Add OpenGraph tags.
 - [ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.
 - [x] Add FontAwesome, I think I can just import the SCSS.
-- [ ] Now that I got FontAwesome I might as well use icons in... Places.
+- [x] Now that I got FontAwesome I might as well use icons in... Places.
+- [ ] Generate a static version of the "old site" to use as the actual old site so we can ditch Drupal.
 
 ### About FontAwesome
 Bootstrap doesn't have a spinner so I also included the font awesome SCSS because I need it at least for the spinner...
+
+### Open Graph
+I vaguely need these tags:
+```
+<meta property="og:title" content="Dynamic page title">
+<meta property="og:site_name" content="La Musique de la Garde Impériale de Waterloo">
+<meta property="og:url" content="http://localhost:8081">
+<meta property="og:description" content="Description will require translation">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://localhost:8081/">
+```
+Some of which have to change with the language, so I'm going to create a partial.
 
 ## Templating
 **NB**: I now regret picking handlebars because you have to write helpers for pretty much anything with that template engine, and since I'm only using it on the Node side I don't care that it's very light. Oh well.
