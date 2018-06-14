@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode=development",
-    "prod": "webpack -p",
-    "test-prod": "webpack --mode=production",
-    "test-build": "webpack --mode=development"
+    "prod": "webpack --mode production",
+    "test-prod": "webpack --mode production",
+    "test-build": "webpack --mode development"
   },
   "author": "DkVZ",
   "license": "MIT",

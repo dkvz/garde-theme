@@ -1,5 +1,6 @@
-// Stole a good part of this config from there:
+// Stole a part of this config from there:
 // https://github.com/jalkoby/sass-webpack-plugin
+// I went in complete sucette afterwards though.
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
@@ -9,11 +10,16 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const contentBase = path.join(__dirname, 'dist');
 
 // Is your plan to never, ever split this config file into 
-// multiple files ?
+// multiple files?
 // Yes. That is my plan. Thanks for asking.
 
 // Actually I did put some options in another file:
 const { conf } = require('./config-options.js');
+
+// Instead of having one file for prod and one for dev
+// I got this really weird convoluted export that exports
+// a function and uh... I'm so sorry.
+// PS: I hate Webpack.
 
 // Generates config objects for HtmlWebpackPlugin instances:
 const minifyOptions = {
@@ -21,11 +27,11 @@ const minifyOptions = {
   collapseWhitespace: true,
   removeAttributeQuotes: false
 }
-function hwpConf(lang, page, pageTitle) {
+function hwpConf(lang, page, pageTitle, env) {
   return {
     template: './src/pages/' + page + '.hbs',
     filename: lang + '/' + page + '.html',
-    minify: (process.env.NODE_ENV === 'production') ? minifyOptions : false,
+    minify: (env === 'production') ? minifyOptions : false,
     chunks: ['app'],
     lang: lang,
     page: page,
@@ -63,8 +69,8 @@ const config = {
       {
         test: /\.scss$/,
         use: [
-          {loader: MiniCssExtractPlugin.loader},
-          {loader: "css-loader"},
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: "css-loader" },
           {
             // PostCSS stuff is required by Bootstrap SCSS.
             loader: 'postcss-loader',
@@ -77,7 +83,7 @@ const config = {
               }
             }
           },
-          {loader: "sass-loader"}
+          { loader: "sass-loader" }
         ]
       },
       {
@@ -108,9 +114,9 @@ const config = {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
         options: {
-            helperDirs: path.join(__dirname, 'src/helpers'),
-            partialDirs: path.join(__dirname, 'src/partials'),
-            inlineRequires: '/static/'
+          helperDirs: path.join(__dirname, 'src/helpers'),
+          partialDirs: path.join(__dirname, 'src/partials'),
+          inlineRequires: '/static/'
         }
       },
       // Adding this loader in case I decide to use FontAwesome.
@@ -134,7 +140,7 @@ const config = {
     }),
     new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin([
-      {from: 'webroot', to: ''}
+      { from: 'webroot', to: '' }
     ]),
     new webpack.DefinePlugin({
       DEFAULT_LANG: "'" + conf.defaultLanguage + "'"
@@ -148,46 +154,55 @@ const config = {
     contentBase: contentBase,
     publicPath: '/',
     port: 8081
-  },
-  devtool: (process.env.NODE_ENV === 'production') ? false : 'source-map'
+  }
 };
 
-// Since we're generating a static site with Webpack
-// We now have to add a whole bunch of instances of
-// HtmlWebpackPlugin. Pure elegance.
+// I have to do this export a function thingy just because
+// I need to determine the environment, and NODE_ENV is not
+// just unreliable, it's NOT WORKING AT ALL.
+module.exports = (env, argv) => {
 
-// Add the main index page here:
-config.plugins.push(
-  new HtmlPlugin({
-    template: './src/pages/index.hbs',
-    filename: 'index.html',
-    minify: (process.env.NODE_ENV === 'production') ? minifyOptions : false,
-    /* I have to use this whole mess because HtmlWebpackPlugin
-     either injects everything in head, or everything in body.
-     And I wanted one of each.
-     So we're disabling injection and using an ugly helper in the template.
-    */
-    inject: false,
-    chunks: ['languageDetection', 'app'],
-    headScript: 'languageDetection',
-    bodyScript: 'app',
-    lang: conf.defaultLanguage,
-    page: 'index',
-    absoluteUrl: conf.absoluteUrl
-  })
-);
+  if (argv.mode === 'development') {
+    config.devtool = 'source-map';
+  }
 
-// Add the different pages.
-// I could scan the "pages" directory.
-conf.languages.map(l => {
+  // Since we're generating a static site with Webpack
+  // We now have to add a whole bunch of instances of
+  // HtmlWebpackPlugin. Pure elegance.
+
+  // Add the main index page here:
   config.plugins.push(
-    new HtmlPlugin(hwpConf(l, 'index')),
-    new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle')),
-    new HtmlPlugin(hwpConf(l, 'historique', 'history')),
-    new HtmlPlugin(hwpConf(l, 'localisation', 'addressAndSched')),
-    new HtmlPlugin(hwpConf(l, 'cd', 'audioCd')),
-    new HtmlPlugin(hwpConf(l, 'presse', 'press'))
+    new HtmlPlugin({
+      template: './src/pages/index.hbs',
+      filename: 'index.html',
+      minify: (argv.mode === 'production') ? minifyOptions : false,
+      /* I have to use this whole mess because HtmlWebpackPlugin
+       either injects everything in head, or everything in body.
+       And I wanted one of each.
+       So we're disabling injection and using an ugly helper in the template.
+      */
+      inject: false,
+      chunks: ['languageDetection', 'app'],
+      headScript: 'languageDetection',
+      bodyScript: 'app',
+      lang: conf.defaultLanguage,
+      page: 'index',
+      absoluteUrl: conf.absoluteUrl
+    })
   );
-});
 
-module.exports = config;
+  // Add the different pages.
+  // I could scan the "pages" directory.
+  conf.languages.map(l => {
+    config.plugins.push(
+      new HtmlPlugin(hwpConf(l, 'index', undefined, argv.mode)),
+      new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle', argv.mode)),
+      new HtmlPlugin(hwpConf(l, 'historique', 'history', argv.mode)),
+      new HtmlPlugin(hwpConf(l, 'localisation', 'addressAndSched', argv.mode)),
+      new HtmlPlugin(hwpConf(l, 'cd', 'audioCd', argv.mode)),
+      new HtmlPlugin(hwpConf(l, 'presse', 'press', argv.mode))
+    );
+  });
+
+  return config;
+};
