@@ -1,15 +1,15 @@
 {{> header lang=htmlWebpackPlugin.options.lang}}
-<section class="container-fluid main-section-fluid-first">
+<section class="container-fluid main-section-fluid-first section-dark">
   <div class="text-center mb-5">
-    <h1 class="page-title page-title-backdrop">{{translate htmlWebpackPlugin.options.lang 'contactUsTitle'}}</h1>
+    <h1 class="page-title">{{translate htmlWebpackPlugin.options.lang 'contactUsTitle'}}</h1>
   </div>
-<div class="container mb-5">
+<div class="container">
   <form id="contactForm" action="javascript:void(0);">
-    <div class="form-row">
+    <div class="form-row text-light">
       <div class="form-group col-lg-6 col-sm-12">
         <label for="emailInput">{{translate htmlWebpackPlugin.options.lang 'yourEmailAddress'}}</label>
         <input type="email" class="form-control" name="email" id="emailInput" required aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">{{translate htmlWebpackPlugin.options.lang 'emailPrivacy'}}</small>
+        <small id="emailHelp" class="form-text text-secondary">{{translate htmlWebpackPlugin.options.lang 'emailPrivacy'}}</small>
       </div>
       <div class="form-group col-lg-6 col-sm-12">
         <label for="nameInput">{{translate htmlWebpackPlugin.options.lang 'yourName'}}</label>
@@ -40,8 +40,10 @@
       </div>
     </div>
   </form>
-
-  <div class="mt-4">
+  </div>
+</section>
+<section class="container-fluid main-section-fluid section-light"></section>
+  <div class="container mb-5">
     <h1>{{translate htmlWebpackPlugin.options.lang 'contactAddresses'}}</h1>
     <hr />
     <p>{{translate htmlWebpackPlugin.options.lang 'contactUsDirectly'}}</p>
@@ -59,6 +61,7 @@
       Fax: +32 (0) 2.353.08.42
     </code>
   </div>
+</section>
 
   <!-- Modal -->
   <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -80,6 +83,4 @@
     </div>
   </div>
 
-</div>
-</section>
 {{> footer lang=htmlWebpackPlugin.options.lang}}

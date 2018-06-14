@@ -63,12 +63,12 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 
 ## TODO
 - [x] Add text shadow to the headline.
-- [ ] Add animations for the stuff in the hero for the index page.
+- [x] Add animations for the stuff in the hero for the index page.
 - [x] Test the font sizes with the responsive tool of browsers.
 - [ ] The shadow on the image-bg-overlay should be inward, not outward.
 - [ ] Why am I using bootstrap?
 - [ ] My contact form backend thingy has to be behind HTTPS or it won't work. 
-- [ ] Add browser check for flex support, redirect to old site otherwise.
+- [x] Add browser check for flex support, redirect to old site otherwise.
 - [x] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
 - [x] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
 - [x] Add all the webroot stuff, mostly the favicons
@@ -79,7 +79,7 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 - ~~[ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.~~
 - [x] Add FontAwesome, I think I can just import the SCSS.
 - [x] Now that I got FontAwesome I might as well use icons in... Places.
-- [ ] Generate a static version of the "old site" to use as the actual old site so we can ditch Drupal.
+- [x] Generate a static version of the "old site" to use as the actual old site so we can ditch Drupal.
 - [ ] Does the CSS processor really add the prefixes like "-webkit-" to keyframes, for instance?
 
 ### About FontAwesome
