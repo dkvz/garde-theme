@@ -80,6 +80,7 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 - [x] Add FontAwesome, I think I can just import the SCSS.
 - [x] Now that I got FontAwesome I might as well use icons in... Places.
 - [ ] Generate a static version of the "old site" to use as the actual old site so we can ditch Drupal.
+- [ ] Does the CSS processor really add the prefixes like "-webkit-" to keyframes, for instance?
 
 ### About FontAwesome
 Bootstrap doesn't have a spinner so I also included the font awesome SCSS because I need it at least for the spinner...
