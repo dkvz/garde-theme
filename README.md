@@ -75,7 +75,7 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 - [ ] Add a sitemap
 - [x] Add OpenGraph tags.
 - [x] Test the OpenGraph tags.
-- [ ] Add the alternatives meta tags relative to the two language versions.
+- [x] Add the alternatives meta tags relative to the two language versions.
 - ~~[ ] Stick the footer to bottom. I think that can be done with flex, check how I did it on my website.~~
 - [x] Add FontAwesome, I think I can just import the SCSS.
 - [x] Now that I got FontAwesome I might as well use icons in... Places.

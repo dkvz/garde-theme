@@ -12,6 +12,7 @@
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="theme-color" content="#ffffff">
   {{> metatags lang=lang}}
+  {{{altHreflang lang htmlWebpackPlugin.options.page}}}
   <title>{{#if htmlWebpackPlugin.options.pageTitle}}{{{translate lang htmlWebpackPlugin.options.pageTitle}}} | {{/if}}{{{translate lang 'siteTitle'}}}</title>
   {{{scriptFromChunk htmlWebpackPlugin.options.headScript}}}
 </head>

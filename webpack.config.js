@@ -12,14 +12,8 @@ const contentBase = path.join(__dirname, 'dist');
 // multiple files ?
 // Yes. That is my plan. Thanks for asking.
 
-// Supported languages:
-const languages = ['fr', 'en'];
-// The main index page will be generated using the
-// default language.
-const defaultLanguage = 'fr';
-// This is passed to the templates and used in some metatags:
-// (NO TRAILING SLASH Plz Sorry For CaPS)
-const absoluteUrl = 'https://2018.lamusiquedelagarde.be';
+// Actually I did put some options in another file:
+const { conf } = require('./config-options.js');
 
 // Generates config objects for HtmlWebpackPlugin instances:
 const minifyOptions = {
@@ -35,7 +29,7 @@ function hwpConf(lang, page, pageTitle) {
     chunks: ['app'],
     lang: lang,
     page: page,
-    absoluteUrl: absoluteUrl,
+    absoluteUrl: conf.absoluteUrl,
     pageTitle: pageTitle ? pageTitle : undefined
   };
 }
@@ -143,7 +137,7 @@ const config = {
       {from: 'webroot', to: ''}
     ]),
     new webpack.DefinePlugin({
-      DEFAULT_LANG: "'" + defaultLanguage + "'"
+      DEFAULT_LANG: "'" + conf.defaultLanguage + "'"
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
@@ -177,15 +171,15 @@ config.plugins.push(
     chunks: ['languageDetection', 'app'],
     headScript: 'languageDetection',
     bodyScript: 'app',
-    lang: defaultLanguage,
+    lang: conf.defaultLanguage,
     page: 'index',
-    absoluteUrl: absoluteUrl
+    absoluteUrl: conf.absoluteUrl
   })
 );
 
 // Add the different pages.
 // I could scan the "pages" directory.
-languages.map(l => {
+conf.languages.map(l => {
   config.plugins.push(
     new HtmlPlugin(hwpConf(l, 'index')),
     new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle')),
