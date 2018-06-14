@@ -3,6 +3,7 @@ import 'bootstrap';
 
 // Check browser compatibility:
 var oldSite = 'http://old.lamusiquedelagarde.be';
+var contactFormUrl = 'https://old.lamusiquedelagarde.be/terrible_contact_form.php';
 import './old-browser-detection.js';
 
 if (!Modernizr.flexbox) {
@@ -50,17 +51,24 @@ if (document.getElementById('contactForm')) {
       message: document.getElementById('messageInput').value
     };
     var modalText = document.getElementById('modalText');
-    $.post('http://old.lamusiquedelagarde.be/terrible_contact_from.php', data, function(response) {
+    
+    $.ajax({
+      url: contactFormUrl,
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(data)
+    }).done(function(response) {
       // Success callback:
       modalText.innerHTML = locales[currentLang].emailSent;
       $('#modal').modal('show');
-    }, 'json').fail(function() {
+      e.target.reset();
+    }).fail(function() {
       modalText.innerHTML = locales[currentLang].emailError;
       $('#modal').modal('show');
     }).always(function() {
       spinner.classList.add('d-none');
-      e.target.reset();
     });
+
   });
 } else if (document.getElementById('scrollDownLink')) {
   // Only the index page has a scroll down link.

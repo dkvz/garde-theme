@@ -17,7 +17,7 @@ npm install
 Inside the project directory.
 
 ## Configuration
-The absolute URL for the website must be set in webpack.config.js.
+Some options, including the absolute base URL for the website (used in the generation of meta tags, among other things) are set in config-options.js at the root of the project.
 
 Also, app.js needs the "old" website URL to redirect in case of unsupported browser. 
 It could be a relative URL to some sort of "Unsupported browser" page. In my case it forwards to a static version of the "old" Drupal website.
@@ -72,7 +72,8 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 - [x] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
 - [x] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.
 - [x] Add all the webroot stuff, mostly the favicons
-- [ ] Add a sitemap
+- [ ] Add a sitemap.
+- [ ] Put the options that are in app.js in config-options.js.
 - [x] Add OpenGraph tags.
 - [x] Test the OpenGraph tags.
 - [x] Add the alternatives meta tags relative to the two language versions.
