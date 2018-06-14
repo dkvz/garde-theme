@@ -6,7 +6,7 @@ var conf = {
   defaultLanguage: 'fr',
   // This is passed to the templates and used in some metatags:
   // (NO TRAILING SLASH Plz Sorry For CaPS)
-  absoluteUrl: 'https://2018.lamusiquedelagarde.be'
+  absoluteUrl: 'https://www.lamusiquedelagarde.be'
 };
 
 exports.conf = conf;
