@@ -136,7 +136,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "static/[name].css",
+      filename: "static/[name][hash:5].css",
     }),
     new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin([
