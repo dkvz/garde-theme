@@ -64,6 +64,7 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 ## TODO
 - [x] Add text shadow to the headline.
 - [x] Add animations for the stuff in the hero for the index page.
+- [ ] Add a hash to the dist CSS filename, it's not doing cache busting right now.
 - [x] Test the font sizes with the responsive tool of browsers.
 - [ ] The shadow on the image-bg-overlay should be inward, not outward.
 - [ ] Why am I using bootstrap?
