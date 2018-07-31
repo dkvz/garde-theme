@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{{lang}}}" prefix="og: http://ogp.me/ns#">
 <head>
+  {{> ganalytics.hbs}}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -49,7 +50,7 @@
               <a class="dropdown-item" href="/{{lang}}/contact.html">{{{translate lang 'contactSociety'}}}</a>
             </div>
           </li>
-          <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'history'}}}">
+          <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'historique'}}}">
             <a class="nav-link" href="/{{lang}}/historique.html">{{{translate lang 'history'}}}</a>
           </li>
           <li class="nav-item {{{linkActive htmlWebpackPlugin.options.page 'cd'}}}">
