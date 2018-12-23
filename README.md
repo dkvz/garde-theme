@@ -62,13 +62,14 @@ The contact form depends on a weird backend form that I use because I'm against 
 I made the translateBlock.js Handlebars helper so that I would not have HTML inside locales.json. It's a weird requirement I made up in my head for some reason, don't judge me.
 
 ## TODO
+- [x] A height smaller than 632px should have the same media query as the small or medium screens.
 - [x] Add text shadow to the headline.
 - [x] Add animations for the stuff in the hero for the index page.
 - [x] Add a hash to the dist CSS filename, it's not doing cache busting right now.
 - [x] Test the font sizes with the responsive tool of browsers.
 - [ ] The shadow on the image-bg-overlay should be inward, not outward.
 - [ ] Why am I using bootstrap?
-- [ ] My contact form backend thingy has to be behind HTTPS or it won't work. 
+- [x] My contact form backend thingy has to be behind HTTPS or it won't work. 
 - [x] Add browser check for flex support, redirect to old site otherwise.
 - [x] Check if the bootstrap JS from npm is using ES6, because if it is, I might as well add Babel.
 - [x] Add a parameter to add a prefix to page titles, something like "Contact | ", only if that parameter is present.

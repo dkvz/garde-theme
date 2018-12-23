@@ -3,6 +3,12 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
+@mixin low-height {
+  @media (max-height: 632px) {
+    @content;
+  }
+}
+
 header {
   position: absolute;
   top: 0;
@@ -311,4 +317,22 @@ and hiding the navbar image
     font-size: 2rem;
   }
 
+}
+
+/*
+This has to be the last media query because of the 
+cascade.
+*/
+@include low-height() {
+  .hero-front h1 {
+    font-size: 2rem;
+  }
+
+  .hero-front h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-front h3 {
+    font-size: 1.2rem;
+  }
 }
