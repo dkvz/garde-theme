@@ -1,4 +1,6 @@
 # Attempt at Web Design - Case Study #0
+Live at https://www.lamusiquedelagarde.be
+
 The project was originally supposed to be a Hugo theme generated through Webpack.
 
 It ended up being the whole site generated through Webpack because that was faster to do than learning about Hugo templating and configure everything over there.
