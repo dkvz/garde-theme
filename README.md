@@ -65,6 +65,7 @@ I made the translateBlock.js Handlebars helper so that I would not have HTML ins
 
 ## TODO
 - [x] A height smaller than 632px should have the same media query as the small or medium screens.
+- [ ] I think the issue with some mobiles not showing the scroll down SVG is due to the max-height in the .image-bg-wrapper CSS class.
 - [x] Add text shadow to the headline.
 - [x] Add animations for the stuff in the hero for the index page.
 - [x] Add a hash to the dist CSS filename, it's not doing cache busting right now.
