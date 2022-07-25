@@ -193,7 +193,7 @@ module.exports = (env, argv) => {
 
   // Add the different pages.
   // I could scan the "pages" directory.
-  conf.languages.map(l => {
+  conf.languages.forEach(l => {
     config.plugins.push(
       new HtmlPlugin(hwpConf(l, 'index', undefined, argv.mode)),
       new HtmlPlugin(hwpConf(l, 'contact', 'contactUsTitle', argv.mode)),
