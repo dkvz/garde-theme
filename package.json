@@ -1,11 +1,12 @@
 {
   "name": "garde-theme",
-  "version": "1.0.0",
-  "description": "Web theme for a website",
+  "version": "1.0.1",
+  "description": "Static website",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode=development",
+    "dev-bind-all": "webpack-dev-server --mode=development --host 0.0.0.0",
     "prod": "webpack --mode production",
     "test-prod": "webpack --mode production",
     "test-build": "webpack --mode development"
