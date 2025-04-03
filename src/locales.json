@@ -18,7 +18,7 @@
     "close": "Fermer",
     "contactAddresses": "Adresses de contact",
     "contactUsDirectly": "Vous pouvez nous contacter directement en envoyant un email à M. David Vandeuren:",
-    "contactVice": "Vous pouvez également contacter notre vice-président par téléphone ou courrier:",
+    "contactVice": "Vous pouvez également nous contacter plus généralement par téléphone, courrier ou email:",
     "yourEmailAddress": "Votre adresse email",
     "yourName": "Votre nom",
     "subject": "Sujet",
@@ -33,7 +33,7 @@
     "sittingConcerts": "Concerts statiques",
     "accessToRehearsal": "Accès au local de répétitions",
     "googleMapLink": "Lien vers Google Maps",
-    "parking": "Parking dans la cour de l'école.",
+    "parking": "Parking possible dans la cour de l'école.",
     "cdAvailable": "Le premier CD de La Musique de la Garde est disponible à la vente.",
     "cdContains": "Il comprend 16 morceaux de notre répertoire",
     "title": "Titre",
@@ -49,7 +49,8 @@
     "pressLink8": "L'Indépendance dans Waterloo info 2007 (Concert d'automne « Les grands moments de la chanson ») Napoléon 1er",
     "pressDesc": "Ci-dessous quelques articles de presse où paraît la Musique de la Garde.",
     "websiteSource": "Code source du site",
-    "metaDescription": "Groupe de reconstitution de la Musique du 1er Régiment des Grenadiers à Pied de la Garde Impériale – ordonnance 1809, créé en 1974 à Waterloo, Belgique"
+    "metaDescription": "Groupe de reconstitution de la Musique du 1er Régiment des Grenadiers à Pied de la Garde Impériale – ordonnance 1809, créé en 1974 à Waterloo, Belgique",
+    "generalContactTitle": "Adresse de contact"
   },
   "en": {
     "contactUs": "Contact us!",
@@ -70,7 +71,7 @@
     "close": "Close",
     "contactAddresses": "Contact addresses",
     "contactUsDirectly": "You can contact us directly by sending an email to Mr David Vandeuren:",
-    "contactVice": "You can also contact our vice president by phone or land mail:",
+    "contactVice": "You can also contact us by phone or land mail or with the more generic email hereunder:",
     "yourEmailAddress": "Your email address",
     "yourName": "Your name",
     "subject": "Subject",
@@ -101,6 +102,7 @@
     "pressLink8": "L'Indépendance in Waterloo info 2007 (Concert « Les grands moments de la chanson ») Napoléon 1er",
     "pressDesc": "Please find hereunder some press articles (in french) featuring \"La Musique de le Garde\".",
     "websiteSource": "Website source code",
-    "metaDescription": "Reenactment group representing La Musique du 1er Régiment des Grenadiers à Pied de la Garde Impériale of the 1st French Empire. The group was created in 1974 at Waterloo, Belgium"
+    "metaDescription": "Reenactment group representing La Musique du 1er Régiment des Grenadiers à Pied de la Garde Impériale of the 1st French Empire. The group was created in 1974 at Waterloo, Belgium",
+    "generalContactTitle": "All-purpose email"
   }
 }
